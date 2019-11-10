@@ -1,0 +1,34 @@
+.login-container{
+    position: absolute;
+    width: 40%;
+    padding: 5%;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    border: 0.5px solid #ddd;
+}
+
+.social-login{
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    justify-content: center;
+}
+.g-login, .fb-login{
+    width: 35px;
+    height: 35px;
+    background-size: contain !important;
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+.g-login:hover, .fb-login:hover{
+    filter: none;
+}
+.g-login{
+    background: url('../../assets/image/icons8-google-48.png');
+}
+.fb-login{
+    background: url('../../assets/image/icons8-facebook-48.png');
+}

@@ -1,0 +1,14 @@
+.main-container{
+    margin-top: 56px;
+    height: 91vh;
+    background-color: #f8faf9;
+}
+
+.navbar{
+    background-color: seagreen;
+}
+
+.btn-g{
+    background-color: seagreen;
+    color: #fff;
+}
