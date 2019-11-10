@@ -1,0 +1,25 @@
+<div class="container col-lg-6 col-xs-12 col-md-6 col-sm-12">
+    <form [formGroup]="UserRegister" (submit)="Register()">
+        <div class="form-group">
+            <label for="firstName">First Name : </label>
+            <input type="text" class="form-control" formControlName="firstName" placeholder="First Name">
+        </div>
+        <div class="form-group">
+                <label for="lastName">Last Name : </label>
+                <input type="text" class="form-control" formControlName="lastName" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+            <label for="Email">Email : </label>
+            <input type="text" class="form-control" formControlName="Email" placeholder="Email">
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number : </label>
+            <input type="text" class="form-control" formControlName="phoneNumber" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="!UserRegister.valid">Register</button>
+            <a class="btn btn-sm" routerLink='/Login'>Cancel</a>
+        </div>
+
+    </form>
+</div>
