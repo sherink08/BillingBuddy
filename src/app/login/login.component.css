@@ -9,3 +9,25 @@
     border-radius: 5px;
     border: 0.5px solid #ddd;
 }
+
+.social-login{
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+.g-login, .fb-login{
+    width: 35px;
+    height: 35px;
+    background-size: contain !important;
+    cursor: pointer;
+    filter: brightness(0.9);
+}
+.g-login:hover, .fb-login:hover{
+    filter: none;
+}
+.g-login{
+    background: url('../../assets/image/icons8-google-48.png');
+}
+.fb-login{
+    background: url('../../assets/image/icons8-facebook-48.png');
+}
