@@ -2,7 +2,7 @@
 
 var mongo = require('mongodb');
 var MongoClient = mongo.MongoClient;
-var config = require('../controllers/Assets/Config');
+var config = require('./Assets/Config');
 var url = config.dbUrl();
 exports.RegisterUser = function(req,res)
 {
