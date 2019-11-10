@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class UserServiceService {
   baseURL:string = environment.baseURl;
   constructor(private http:HttpClient) { }
-  registerUser = function(userData)
+  registerUser(userData)
   {
     var url = this.baseURL+"Register";
     return this.http.post(url,userData);

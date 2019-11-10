@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.login-container{
+    position: absolute;
+    width: 40%;
+    padding: 5%;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    border: 0.5px solid #ddd;
+}
+.main-container{
+    margin-top: 56px;
+    height: 91vh;
+    background-color: #f8faf9;
+}
+
+.navbar{
+    background-color: seagreen;
+}
+
+.btn-g{
+    background-color: seagreen;
+    color: #fff;
+}
