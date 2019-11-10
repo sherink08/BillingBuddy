@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar{
+    background-color: seagreen;
+}
+
 .login-container{
     position: absolute;
     width: 40%;
@@ -10,14 +14,11 @@
     border-radius: 5px;
     border: 0.5px solid #ddd;
 }
+
 .main-container{
     margin-top: 56px;
     height: 91vh;
     background-color: #f8faf9;
-}
-
-.navbar{
-    background-color: seagreen;
 }
 
 .btn-g{

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl,Validators} from '@angular/forms';
 import {UserServiceService} from '../services/user-service.service';
 import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -27,6 +28,7 @@ export class RegisterComponent implements OnInit {
       console.log(this.UserRegister.value);
       this.user.registerUser(this.UserRegister.value).subscribe(function(ret){
         if(ret=="Success"){
+
           console.log("Success");
           alert("Registerd successfully , Login to continue");
           _this.router.navigate(['/Login']);

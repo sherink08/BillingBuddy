@@ -4,6 +4,7 @@ var mongo = require('mongodb');
 var MongoClient = mongo.MongoClient;
 var config = require('./Assets/Config');
 var url = config.dbUrl();
+var mailer = require('./Assets/MailHelper.js');
 exports.RegisterUser = function(req,res)
 {
     MongoClient.connect(url, function(err, db) {
@@ -17,6 +18,7 @@ exports.RegisterUser = function(req,res)
          {
           users.insertOne(user, function(err, resp) {
             if (err) res.json(err);
+            //mailer.sendMail(user.Email);  ssl issue is there , check back after 
             db.close();
             res.json("Success");
           });
