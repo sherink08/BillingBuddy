@@ -21,7 +21,6 @@ export class RegisterComponent implements OnInit {
   }
   Register()
   {
-    debugger;
     if(this.UserRegister.valid)
     {
       var _this  =this;
@@ -29,7 +28,6 @@ export class RegisterComponent implements OnInit {
       this.user.registerUser(this.UserRegister.value).subscribe(function(ret){
         if(ret=="Success"){
           console.log("Success");
-          debugger;
           alert("Registerd successfully , Login to continue");
           _this.router.navigate(['/Login']);
         }
@@ -42,7 +40,6 @@ export class RegisterComponent implements OnInit {
       {
         console.log(err);
         alert('Error occured , please try again later!');
-
       });
     }
   }

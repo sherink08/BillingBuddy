@@ -10,11 +10,23 @@ exports.RegisterUser = function(req,res)
         if (err) res.json(err);
         var dbo = db.db(config.dbName());
         var user = req.body;
-        dbo.collection("Users").insertOne(user, function(err, resp) {
-          if (err) res.json(err);
-          console.log("1 document inserted");
-          db.close();
-          res.json("Success");
+        const users = dbo.collection("Users");
+        var query = {$or:[{Email:user.Email},{PhoneNumber:user.PhoneNumber}]};
+        users.find(query).toArray(function(err,data){
+         if(data.length==0)
+         {
+          users.insertOne(user, function(err, resp) {
+            if (err) res.json(err);
+            db.close();
+            res.json("Success");
+          });
+         }
+          else
+          {
+            db.close();
+            res.json("Email ID or Password already registered!");
+          }
         });
+        
       });
 }
