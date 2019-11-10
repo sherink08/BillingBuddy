@@ -1,0 +1,11 @@
+.login-container{
+    position: absolute;
+    width: 40%;
+    padding: 5%;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    border: 0.5px solid #ddd;
+}
