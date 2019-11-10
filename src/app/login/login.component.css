@@ -14,6 +14,7 @@
     display: flex;
     margin-top: 8px;
     margin-bottom: 5px;
+    justify-content: center;
 }
 .g-login, .fb-login{
     width: 35px;
