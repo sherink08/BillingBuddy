@@ -5,5 +5,7 @@ module.exports = function(app)
         .post(Reg.RegisterUser);
     app.route('/Cr')
         .post(Reg.crypt);
+    app.route('/Login')
+        .post(Reg.login);
 
 }

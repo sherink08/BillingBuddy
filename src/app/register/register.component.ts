@@ -28,16 +28,12 @@ export class RegisterComponent implements OnInit {
     {
       var _this  =this;
       delete this.UserRegister.value.confirmPassword;
-      console.log(this.UserRegister.value);
       this.user.registerUser(this.UserRegister.value).subscribe(function(ret){
         if(ret=="Success"){
-
-          console.log("Success");
           alert("Registerd successfully , Login to continue");
           _this.router.navigate(['/Login']);
         }
         else{
-          console.log(ret);
           alert(ret);
         }
       },
