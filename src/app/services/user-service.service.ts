@@ -13,5 +13,14 @@ export class UserServiceService {
     var url = this.baseURL+"Register";
     return this.http.post(url,userData);
   }
+  Login(User)
+  {
+    var url = this.baseURL+"Login";
+    return this.http.post(url,User);
+  }
+  isLoggedIn()
+  {
+    return !!sessionStorage.user;
+  }
 
 }

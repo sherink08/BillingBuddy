@@ -1,5 +1,5 @@
 <div class="login-container">
-    <form [formGroup]="Login">
+    <form [formGroup]="Login" (submit)="onLogin()">
         <div class="form-group">
             <label for="email">Email address:</label>
             <input type="email" formControlName="Email" class="form-control" id="email">
@@ -9,7 +9,7 @@
             <input type="password" formControlName="Password" class="form-control" id="pwd">
         </div>
 
-        <button class="btn btn-primary">Login</button>
+        <button class="btn btn-r" type="submit" [disabled]="!Login.valid">Login</button>
         <div class="social-login">
             <span class="g-login"></span>
             <span class="fb-login"></span>
