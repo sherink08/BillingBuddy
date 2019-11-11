@@ -12,7 +12,8 @@ exports.RegisterUser = function(req,res)
         var dbo = db.db(config.dbName());
         var user = req.body;
         const users = dbo.collection("Users");
-        var query = {$or:[{Email:user.Email},{PhoneNumber:user.PhoneNumber}]};
+        console.log(user.Email+" "+user.phoneNumber);
+        var query = {$or:[{Email:user.Email},{phoneNumber:user.phoneNumber}]};
         users.find(query).toArray(function(err,data){
          if(data.length==0)
          {
