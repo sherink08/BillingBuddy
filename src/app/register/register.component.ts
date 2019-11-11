@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl,Validators} from '@angular/forms';
 import {UserServiceService} from '../services/user-service.service';
 import {Router} from '@angular/router';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -21,15 +22,14 @@ export class RegisterComponent implements OnInit {
   }
   Register()
   {
-    debugger;
     if(this.UserRegister.valid)
     {
       var _this  =this;
       console.log(this.UserRegister.value);
       this.user.registerUser(this.UserRegister.value).subscribe(function(ret){
         if(ret=="Success"){
+
           console.log("Success");
-          debugger;
           alert("Registerd successfully , Login to continue");
           _this.router.navigate(['/Login']);
         }
@@ -42,7 +42,6 @@ export class RegisterComponent implements OnInit {
       {
         console.log(err);
         alert('Error occured , please try again later!');
-
       });
     }
   }
