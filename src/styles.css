@@ -190,7 +190,14 @@ input[type="text"]{
     padding-left: 19px; 
     border-radius: 8px 8px 0px 0px;
 }
-
+.chat-you > *, .chat-others > *{
+    margin-top:5px;
+}
+.chat-you > span:last-child, .chat-others > span:last-child{
+    font-size: 10px;
+    color: #555;
+    margin-bottom: -10px;
+}
 .chat-you{
     align-self: flex-start;
 }
