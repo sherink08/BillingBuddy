@@ -1,5 +1,46 @@
+<!-- chat menu -->
 <div class="menu">
     <span class="shape"><i></i>Buddy</span>
     <span class="shape"><i></i>Buddies</span>
-    <span class="shape"><i></i>Room</span>
+    <span class="shape active"><i></i>Room</span>
+</div>
+
+<div class="chat-box">
+    <!-- chat alerts-->
+    <div class="chat-box-alerts">
+        <div class="alert alert-danger">
+            <label>You haven't set the <b>Room Rent</b> for this month</label>
+            <div class="generate-rent">
+                <input type="text" placeholder="Enter Amount">
+                <button class="btn btn-info">Generate</button>
+            </div>
+        </div>
+        <div class="alert alert-info">
+            <span>You have to give <b class="danger">1000</b> before <b class="danger">10/11/2020</b></span>
+        </div>
+    </div>
+    <!-- chat section -->
+    <div class="chat-others">
+        <label>Name</label>
+        <span>1000</span>
+        <span>on.02/11/2020</span>
+    </div>
+    <div class="chat-you">
+        <label>Name</label>
+        <span>Listen everyone! please send the amount before 10/11/2020.</span>
+        <span>on.02/11/2020</span>
+    </div>
+    <div class="chat-others">
+        <label>Name</label>
+        <span>1000</span>
+        <span>on.02/11/2020</span>
+    </div>
+</div>
+
+<!-- chat control buttons -->
+<div class="chat-controls">
+    <button class="pay-btn btn btn-info">Pay</button>
+    <button class="req-btn btn btn-info">Request</button>
+    <input type="text" class="text-msg"/>
+    <span><i class="send-text"></i></span>
 </div>
