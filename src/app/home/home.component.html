@@ -1,8 +1,8 @@
 <!-- chat menu -->
 <div class="menu">
-    <span class="shape"><i></i>Buddy</span>
-    <span class="shape"><i></i>Buddies</span>
-    <span class="shape active"><i></i>Room</span>
+    <span class="shape">Buddy</span>
+    <span class="shape">Buddies</span>
+    <span class="shape active">Room</span>
 </div>
 
 <div class="chat-box">
@@ -39,8 +39,9 @@
 
 <!-- chat control buttons -->
 <div class="chat-controls">
+    <span (click)="hideType()"><i class="fa fa-close"></i></span>
     <button class="pay-btn btn btn-info">Pay</button>
     <button class="req-btn btn btn-info">Request</button>
-    <input type="text" class="text-msg"/>
+    <input type="text" (click)="type()" class="text-msg"/>
     <span><i class="send-text"></i></span>
 </div>

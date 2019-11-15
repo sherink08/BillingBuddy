@@ -1,5 +1,6 @@
 *{
-    font-family: Candara;
+    /* font-family: Candara; */
+    font-family: Segoe UI Symbol;
 }
 
 .info{
@@ -86,7 +87,7 @@ input[type="text"]{
     font-weight: bold;
     cursor: pointer;
     width: 33%;
-    display: flex;
+    text-align: center;
     padding: 5px 5% 0px 5%;
     border-radius: 8px 8px 0px 0px;
 }
@@ -100,13 +101,6 @@ input[type="text"]{
     border-bottom: 0.5px solid #187772;
     height: 42px;
     margin-top: -4px;
-}
-.shape > i{
-    background: url('assets/image/cash.png');
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
 }
 
 .chat-box{
@@ -148,6 +142,11 @@ input[type="text"]{
     display: grid;
     grid-template-columns: 70px 90px minmax(0, 1fr) 25px;
     grid-gap: 5px;
+}
+
+.chat-controls > span:first-child{
+    display: none;
+    margin: 6px auto;
 }
 
 .send-text{
