@@ -9,7 +9,6 @@ export class HttpInterceptorService implements HttpInterceptor {
   constructor() { }
   intercept(req,next)
   {
-    debugger;
     if(!sessionStorage.user)
       return next.handle(req);
     var tokenizedReq = req.clone({

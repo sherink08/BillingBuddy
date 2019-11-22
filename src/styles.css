@@ -16,6 +16,15 @@
     color: #721c24;
 }
 
+.error-slide{
+    position: fixed;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
 input[type="text"]{
     padding: .375rem .75rem;
     border: 1px solid #ced4da;

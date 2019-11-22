@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup,FormControl, Validators} from '@angular/forms';
-import {UserServiceService} from '../services/user-service.service';
+import { FormGroup,FormControl, Validators } from '@angular/forms';
+import { UserServiceService } from '../services/user-service.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
@@ -8,14 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
   Login = new FormGroup({
     Email:new FormControl('',Validators.required),
     Password:new FormControl('',Validators.required)
   });
+
+  errormsg: string = "";
+
   constructor(private user:UserServiceService,private router:Router) { }
 
   ngOnInit() {
   }
+
   onLogin = function(){
     if(this.Login.valid)
     {
@@ -29,7 +34,10 @@ export class LoginComponent implements OnInit {
         else
         {
           sessionStorage.clear();
-          alert(ret.error);
+          _this.errormsg = ret.error;
+
+          $("#loginErrModal").css( { 'top' : 10 } );
+          setTimeout(function(){ $("#loginErrModal").css( { 'top' : -50 } ); }, 3000);
         }
       });
     }

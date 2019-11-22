@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './services/auth.guard';
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import * as $ from 'jquery';
+import * as bootstrap from "bootstrap";
 
 @NgModule({
   declarations: [
