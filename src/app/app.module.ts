@@ -9,7 +9,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './services/auth.guard';
-import {HttpInterceptorService} from './services/http-interceptor.service';
+import { HttpInterceptorService } from './services/http-interceptor.service';
+import * as $ from 'jquery';
 
 @NgModule({
   declarations: [
