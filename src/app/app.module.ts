@@ -15,6 +15,8 @@ import * as bootstrap from "bootstrap";
 import { HeaderComponent } from './header/header.component';
 import { ChatComponent } from './chat/chat.component';
 import { RoomprogresschartComponent } from './roomprogresschart/roomprogresschart.component';
+import { ChatHeaderComponent } from './chat-header/chat-header.component';
+import { ChatDetailsComponent } from './chat-details/chat-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RoomprogresschartComponent } from './roomprogresschart/roomprogresschar
     RegisterComponent,
     HeaderComponent,
     ChatComponent,
-    RoomprogresschartComponent
+    RoomprogresschartComponent,
+    ChatHeaderComponent,
+    ChatDetailsComponent
   ],
   imports: [
     BrowserModule,
