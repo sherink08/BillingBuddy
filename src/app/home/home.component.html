@@ -1,57 +1,7 @@
-<!-- chat menu -->
-<div class="menu">
-    <span class="shape">Buddy</span>
-    <span class="shape">Buddies</span>
-    <span class="shape active">Room</span>
-</div>
+<app-header></app-header>
 
-<div class="chat-box">
-    <!-- chat alerts-->
-    <div class="chat-box-alerts">
-        <div class="alert alert-danger">
-            <label>You haven't set the <b>Room Rent</b> for this month</label>
-            <div class="generate-rent">
-                <input type="text" placeholder="Enter Amount">
-                <button class="btn btn-info">Generate</button>
-            </div>
-        </div>
-        <div class="alert alert-info">
-            <span>You have to give <b class="danger">1000</b> before <b class="danger">10/11/2020</b></span>
-        </div>
-    </div>
-    <!-- chat section -->
-    <div class="chat-others">
-        <label>Name</label>
-        <span>1000</span>
-        <span>02/11/2020</span>
-    </div>
-    <div class="chat-you">
-        <label>Name</label>
-        <span>Listen everyone! please send the amount before 10/11/2020.</span>
-        <span>02/11/2020</span>
-    </div>
-    <div class="chat-others">
-        <label>Name</label>
-        <span>1000</span>
-        <span>02/11/2020</span>
-    </div>
-    <div class="chat-you">
-        <label>Name</label>
-        <span>1000</span>
-        <span>02/11/2020</span>
-    </div>
-    <div class="chat-others">
-        <label>Name</label>
-        <span>1000</span>
-        <span>02/11/2020</span>
-    </div>
-</div>
-
-<!-- chat control buttons -->
-<div class="chat-controls">
-    <span (click)="hideType()"><i class="fa fa-close"></i></span>
-    <button class="pay-btn btn btn-info">Pay</button>
-    <button class="req-btn btn btn-info">Request</button>
-    <input type="text" (click)="type()" class="text-msg"/>
-    <span><i class="send-text"></i></span>
+<div class="container">
+    
+    <button class="btn btn-info form-control"><i class="fa fa-tasks"> Activities</i></button>
+    <app-roomprogresschart></app-roomprogresschart>
 </div>

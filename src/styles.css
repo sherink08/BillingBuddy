@@ -1,6 +1,6 @@
 *{
-    /* font-family: Candara; */
-    font-family: Segoe UI Symbol;
+    font-family: Candara;
+    /* font-family: Segoe UI Symbol; */
 }
 
 .info{
@@ -56,15 +56,17 @@ input[type="text"]{
     background: #0f6660;
 }
 
-/*
 .navbar{
-    background-color: #00203F;
+    background-color: #65B657;
 }
-*/
+
+.navbar a{
+    color: rgb(243, 255, 241) !important;
+}
 
 .main-container{
-    /*margin-top: 56px;*/
-    /*height: 91vh;*/
+    margin-top: 56px;
+    height: 91vh;
     background-color: #f8faf9;
     padding-top: 20px;
 }
@@ -92,6 +94,7 @@ input[type="text"]{
     position: relative;
     z-index: 20;
     bottom: -1px;
+    padding-top: 10px;
 }
 .shape{
     background-color: #f6fffb;
@@ -120,7 +123,7 @@ input[type="text"]{
 .chat-box{
     position: relative;
     background: #ffffff;
-    height: 80vh;
+    height: 72vh;
     overflow-y: scroll;
     /* border: 0.5px solid #ADF0D1; */
     border: 0.5px solid #187772;
@@ -215,7 +218,10 @@ input[type="text"]{
     align-self: flex-end;
 }
 
-
+#chartContainer{
+    height: 30vh;
+    margin: 15px;
+}
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {

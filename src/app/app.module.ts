@@ -12,13 +12,19 @@ import { AuthGuard } from './services/auth.guard';
 import { HttpInterceptorService } from './services/http-interceptor.service';
 import * as $ from 'jquery';
 import * as bootstrap from "bootstrap";
+import { HeaderComponent } from './header/header.component';
+import { ChatComponent } from './chat/chat.component';
+import { RoomprogresschartComponent } from './roomprogresschart/roomprogresschart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    HeaderComponent,
+    ChatComponent,
+    RoomprogresschartComponent
   ],
   imports: [
     BrowserModule,
