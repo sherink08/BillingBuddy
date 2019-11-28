@@ -1,6 +1,8 @@
 <nav class="chat-header fixed-top" routerLink="/Chat-details">
     <div>
-        <img class="room-image" src="../../assets/image/abstract_lines_square-512.png">
+        <i *ngIf="currentBody=='chat'" class="fa fa-chevron-left" routerLink="/Home"></i>
+        <img *ngIf="currentBody=='chat'" class="user-img" src="../../assets/user_images/sample-group.jpg" />
+        <i *ngIf="currentBody=='details'" class="fa fa-chevron-left" routerLink="/Chat"></i>
     </div>
     <div class="w-100 d-flex justify-content-center">
         <span>Room No 111</span>
