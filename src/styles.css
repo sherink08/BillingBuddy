@@ -136,7 +136,7 @@ input[type="text"]{
 }
 
 .chat-header{
-    /* background-color: #65B657; */
+    /*background-color: #65B657;*/
     background-color: #3E8D0D;
     color: rgb(243, 255, 241) !important;
     font-size: 18px;
