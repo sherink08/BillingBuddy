@@ -144,6 +144,7 @@ input[type="text"]{
     height: 55px;
     display: flex;
     padding: 0px 15px 0px 15px;
+	cursor:pointer;
 }
 
 .chat-header > div{
