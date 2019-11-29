@@ -1,6 +1,7 @@
 *{
-    font-family: Candara;
+    /* font-family: Candara; */
     /* font-family: Segoe UI Symbol; */
+    font-family: Helvetica;
 }
 
 .info{
@@ -53,18 +54,20 @@ input[type="text"]{
     background: #0f6660;
 }
 
+.navbar-brand img{
+    width: 25px;
+}
 .navbar{
-    /* background-color: #65B657; */
-    background-color: #3E8D0D;
+    /* background-color: #3E8D0D; */
+    background-color: #e9ffdc;
     -webkit-box-shadow: 0px 1px 3px 0px #657b61;
     -moz-box-shadow: 0px 1px 3px 0px #657b61;
     box-shadow: 0px 1px 3px 0px #657b61;
 }
 
 .navbar a{
-    color: rgb(243, 255, 241) !important;
+    color: #112b01 !important;
     font-size: 18px;
-    font-weight: 600;
 }
 
 .navbar > a:first-child{
@@ -136,15 +139,16 @@ input[type="text"]{
 }
 
 .chat-header{
-    /*background-color: #65B657;*/
-    background-color: #3E8D0D;
-    color: rgb(243, 255, 241) !important;
+    background-color: #e9ffdc;
+    color: #112b01 !important;
     font-size: 18px;
-    font-weight: 600;
     height: 55px;
     display: flex;
     padding: 0px 15px 0px 15px;
-	cursor:pointer;
+    cursor:pointer;
+    -webkit-box-shadow: 0px 1px 3px 0px #657b61;
+    -moz-box-shadow: 0px 1px 3px 0px #657b61;
+    box-shadow: 0px 1px 3px 0px #657b61;
 }
 
 .chat-header > div{
