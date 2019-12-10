@@ -5,6 +5,10 @@
     <button class="btn btn-light">Room management</button>
 </div>
 
+<div>
+    <button (click)="addMember()">Add/Invite member</button>
+</div>
+
 <div class="btn-group-vertical btn-grp">
     <h6>4 participiants</h6>
     <div class="profile-card">
@@ -14,22 +18,10 @@
         </div>
         <span class="badge badge-success">Admin</span>
     </div>
-    <div class="profile-card">
+    <div class="profile-card" *ngFor="let user of users">
         <div>
             <img class="user-img" src="../../assets/user_images/sample_user.jpg" />
-            <label>Name</label>
-        </div>
-    </div>
-    <div class="profile-card">
-        <div>
-            <img class="user-img" src="../../assets/user_images/sample_user.jpg" />
-            <label>Name</label>
-        </div>
-    </div>
-    <div class="profile-card">
-        <div>
-            <img class="user-img" src="../../assets/user_images/sample_user.jpg" />
-            <label>Name</label>
+            <label>{{user.firstName+' '+user.lastName}}</label>
         </div>
     </div>
 </div>
