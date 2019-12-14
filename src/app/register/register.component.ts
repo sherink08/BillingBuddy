@@ -28,6 +28,7 @@ export class RegisterComponent implements OnInit {
     {
       var _this  =this;
       delete this.UserRegister.value.confirmPassword;
+      this.UserRegister.value.userGroup = "admin";//one who registers will be admin
       this.user.registerUser(this.UserRegister.value).subscribe(function(ret){
         if(ret=="Success"){
           alert("Registerd successfully , Login to continue");

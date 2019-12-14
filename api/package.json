@@ -1,10 +1,9 @@
 {
-  "name": "employeeapi",
+  "name": "BillingBuddy",
   "version": "1.0.0",
-  "description": "EMployeeCRUD",
+  "description": "Billing Buddy Api",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
   "author": "Sherin K",
