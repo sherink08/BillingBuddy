@@ -17,6 +17,8 @@ import { ChatComponent } from './chat/chat.component';
 import { RoomprogresschartComponent } from './roomprogresschart/roomprogresschart.component';
 import { ChatHeaderComponent } from './chat-header/chat-header.component';
 import { ChatDetailsComponent } from './chat-details/chat-details.component';
+import { RoommgmntComponent } from './roommgmnt/roommgmnt.component';
+import { CreateRoomComponent } from './create-room/create-room.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ChatDetailsComponent } from './chat-details/chat-details.component';
     ChatComponent,
     RoomprogresschartComponent,
     ChatHeaderComponent,
-    ChatDetailsComponent
+    ChatDetailsComponent,
+    RoommgmntComponent,
+    CreateRoomComponent
   ],
   imports: [
     BrowserModule,

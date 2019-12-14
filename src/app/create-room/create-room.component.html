@@ -1,0 +1,12 @@
+<app-header></app-header>
+
+<form class="container" [formGroup]="roomForm" (submit)="createRoom()">
+    <div class="form-group">
+        <label>Room Name: </label>
+        <input type="text" class="form-control" formControlName="roomname">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success" [disabled]="!roomForm.valid">Register</button>
+        <a class="btn btn-sm" routerLink='/Home'>Cancel</a>
+    </div>
+</form>

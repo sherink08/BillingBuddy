@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { RoomServiceService } from '../services/room-service.service';
+
 declare var $:JQueryStatic; // jquery 
 
 @Component({
@@ -8,21 +10,29 @@ declare var $:JQueryStatic; // jquery
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private roomservice: RoomServiceService) { }
 
   ngOnInit() {
-  }
 
-  type()
-  {
-    $('.chat-controls button').hide();
-    $('.chat-controls span:first-child').show();
-    $('.chat-controls').css( "grid-template-columns", "25px minmax(0, 1fr) 25px" );
-  }
-  hideType(){
-    $('.chat-controls button').show();
-    $('.chat-controls span:first-child').hide();
-    $('.chat-controls').css( "grid-template-columns", "70px 90px minmax(0, 1fr) 25px" );
+    let usr = JSON.parse(sessionStorage.user);
+    const user = {
+        name: usr.firstName +' '+ usr.lastName,
+        email: usr.Email
+    };
+
+    this.roomservice.getRoomList(user).subscribe(function(ret){
+      if(ret=="Success"){
+        alert(ret);
+      }
+      else{
+        alert(ret);
+      }
+    },
+    function(err)
+    {
+      console.log(err);
+      alert('Error occured , please try again later!');
+    });
   }
 
 }

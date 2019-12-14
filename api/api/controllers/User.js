@@ -64,6 +64,26 @@ exports.login = function(req,res)
     }
   });
 }
+
+exports.getUsers = function(req,res)
+{
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    
+    var dbo = db.db(config.dbName());
+    var users = dbo.collection("Users");
+
+    users.find({}).toArray(function (err, result) {
+      if (err) {
+          res.send(err);
+      } else {
+          res.send(JSON.stringify(result));
+      }
+    })
+    
+  });
+}
+
 exports.crypt =function(req,res)
 {
   const encryptedString = cryptr.encrypt('muhsinwazza@gmail.com');

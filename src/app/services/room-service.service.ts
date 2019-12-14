@@ -1,26 +1,27 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
+
 @Injectable({
   providedIn: 'root'
 })
-export class UserServiceService {
+
+export class RoomServiceService {
+  
   baseURL:string = environment.baseURl;
   constructor(private http:HttpClient) { }
-  registerUser(userData)
+  
+  createRoom(roomData,userData)
   {
-    var url = this.baseURL+"Register";
-    return this.http.post(url,userData);
+    var url = this.baseURL+"createRoom";
+    return this.http.post(url,roomData);
   }
-  Login(User)
-  {
-    var url = this.baseURL+"Login";
-    return this.http.post(url,User);
+
+  getRoomList(user){
+    var url = this.baseURL+"getRoomList";
+    return this.http.post(url,user);
   }
-  getUsers(){
-    var url = this.baseURL+"Users";
-    return this.http.get(url);
-  }
+
   isLoggedIn()
   {
     return !!sessionStorage.user;

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { UserServiceService } from '../services/user-service.service';
 
 @Component({
   selector: 'app-chat-details',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatDetailsComponent implements OnInit {
 
-  constructor() { }
+  users: any;
+  
+  constructor(private user:UserServiceService) {
+    this.user.getUsers().subscribe(data => {
+      this.users = data;
+    });
+  }
 
-  ngOnInit() {
+  ngOnInit(){
+
+  }
+  
+  addMember(){
+
   }
 
 }
