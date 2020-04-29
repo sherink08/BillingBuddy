@@ -11,7 +11,7 @@ export class RoomServiceService {
   baseURL:string = environment.baseURl;
   constructor(private http:HttpClient) { }
   
-  createRoom(roomData,userData)
+  createRoom(roomData)
   {
     var url = this.baseURL+"createRoom";
     return this.http.post(url,roomData);
