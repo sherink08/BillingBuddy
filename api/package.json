@@ -17,7 +17,7 @@
     "cryptr": "^6.0.1",
     "express": "^4.17.1",
     "mongodb": "^3.3.3",
-    "nodemailer": "^6.3.1"
+    "nodemailer": "^6.4.16"
   },
   "keywords": []
 }
